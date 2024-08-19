@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .main {
+            position: relative;
+            height: 100vh;
+        }
+
+        .main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('main backround.jpg') no-repeat center center / cover;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        nav {
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 175px;
+        }
+
+        .lang {
+            height: 35px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 5%;
+            left: 290px;
+        }
+
+        .lang::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .lang img {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 20px;
+        }
+
+        .lang form {
+            padding-right: 10px;
+
+        }
+
+        .lang form select {
+            background: none;
+            color: white;
+            border: none;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .lang form select option {
+            background: black;
+            color: white;
+        }
+
+        .signIn {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 5%;
+            background-color: red;
+        }
+
+        .signIn button {
+            height: 35px;
+            background-color: red;
+            border: none;
+            padding-left: 12px;
+            padding-right: 12px;
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .signIn button:hover {
+            background-color: rgb(189, 5, 5);
+
+        }
+
+        .text {
+            height: 555px;
+            width: 100%;
+            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        .text h1 {
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .text p {
+            font-size: 25px;
+            padding-top: 20px;
+        }
+
+        .text div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .email {
+            margin-top: 20px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 5%;
+        }
+
+        .email::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .email form input {
+            height: 50px;
+            background: none;
+            border: none;
+            width: 400px;
+            color: white;
+            padding-left: 10px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+
+        .getStart button {
+            border-radius: 5%;
+            margin-left: 10px;
+            margin-top: 20px;
+            height: 50px;
+            width: 100%;
+            background-color: red;
+            border: 2px solid white;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: white;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        .getStart button:hover {
+            background-color: rgb(189, 5, 5);
+        }
+
+        .line {
+            background-color: rgb(51, 51, 51);
+            width: 100%;
+            height: 7px;
+        }
+
+        .tv {
+            width: 98.9vw;
+            height: 381px;
+            padding: 72px 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tvImg {
+            position: relative;
+        }
+
+        .tvImg img {
+            width: 512px;
+            height: 384px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tvImg video {
+            width: 373px;
+            height: 210px;
+            position: absolute;
+            top: 80px;
+            right: 72px;
+        }
+
+        .tvImg2 {
+            position: relative;
+        }
+
+        .tvImg2 img {
+            width: 590px;
+            height: 384px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tvImg2 video {
+            width: 373px;
+            height: 210px;
+            position: absolute;
+            top: 30px;
+            right: 110px;
+        }
+
+
+        .phone {
+            width: 98.9vw;
+            height: 380px;
+            padding: 72px 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phImg {
+            position: relative;
+        }
+
+        .phone .phImg img {
+            width: 512px;
+            height: 384px;
+        }
+
+        .st {
+            position: absolute;
+            background-color: black;
+            bottom: 30px;
+            left: 90px;
+            border-radius: 5%;
+            height: 75px;
+            width: 308px;
+            padding: 8px 12px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <span class="logo">
+                <img src="logo.svg" alt="">
+            </span>
+            <span class="lang">
+                <img src="lang.svg" alt="">
+                <form action="">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Hindi">हिन्दी</option>
+                    </select>
+                </form>
+            </span>
+            <span class="signIn">
+                <button>Sign In</button>
+            </span>
+        </nav>
+        <div class="text">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership</p>
+            <div>
+                <span class="email">
+                    <form action="">
+                        <input type="email" name="email" id="" placeholder="Email Address">
+                    </form>
+                </span>
+                <span class="getStart">
+                    <button>Get Started</button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="line"></div>
+    <div class="tv">
+        <div class="text">
+            <h1>Enjoy on your TV</h1>
+            <p style="margin-left: 139px;">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players
+                and more.</p>
+        </div>
+
+        <div class="tvImg">
+            <video src="video-tv-in-0819.m4v" style="margin-right: 150px;" autoplay muted loop></video>
+            <img style="margin-right: 150px;" src="tv.png" alt="">
+        </div>
+
+
+    </div>
+    <div class="line"></div>
+    <div class="phone">
+        <div class="phImg">
+            <img src="mobile.jpg" alt="">
+            <div class="st">
+                <img style="width: 51px; height: 72px;" src="boxshot.png" alt="">
+                <div style="color: white;">
+                    <p>Stranger Things</p>
+                    <p style="color: red;">Downloading...</p>
+                </div>
+                <img style="width: 40px; height: 40px;" src="download.gif" alt="">
+            </div>
+        </div>
+        <div style="margin-left: 50px;" class="text">
+            <h1>Download your shows to watch offline</h1>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="tv">
+        <div class="text">
+            <h1>Watch everywhere</h1>
+            <p style="margin-left: 75px;">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players
+                and more.</p>
+        </div>
+
+        <div class="tvImg2">
+            <video src="video-devices-in.m4v" style="margin-right: 150px;" autoplay muted loop></video>
+            <img style="margin-right: 150px;" src="device-pile-in.png" alt="" style="width: 700px;">
+        </div>
+
+
+    </div>
+    <div class="line"></div>
+    <div class="child">
+        <div><img src="children.png" alt=""></div>
+        <div class="text">
+            <h1 style="position: relative; right: 70px;">Create profiles for kids</h1>
+            <p>Send children on adventures with their favourite characters in a space made just for them—free <br> with your membership.</p>
+        </div>
+    </div>
+</body>
+
+</html>
